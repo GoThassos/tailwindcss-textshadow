@@ -1,23 +1,17 @@
-
-const _ = require('lodash')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(function({ addUtilities, e, theme, variants }) {
   const textShadow = theme('textShadow', {})
-  
   const textShadowVariants = variants('textShadow', [])
 
-  const utilities = _.fromPairs(
-     _.map(textShadow, (value, modifier) => {
-        const className = modifier === 'default' ? 'text-shadow' : `${e(`text-shadow-${modifier}`)}`
-         return [
-           `.${className}`,
-          {
-            'text-shadow': value,
-          },
-         ]
-     })
-  )
+  const utilities = Object.entries(textShadow).reduce((acc, [modifier, value]) => {
+    const className = modifier === 'default' ? 'text-shadow' : e(`text-shadow-${modifier}`)
+
+    acc[`.${className}`] = {
+      'text-shadow': value,
+    }
+    return acc
+  }, {})
 
   addUtilities(utilities, textShadowVariants)
 },
