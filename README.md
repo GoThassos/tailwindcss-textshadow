@@ -1,6 +1,6 @@
 # tailwindcss-textshadow
-A Utility Plugins for controlling Text Shadow of an text element.
 
+A Utility Plugins for controlling Text Shadow of an text element.
 
 
 |  Class   |   Properties  |
@@ -12,27 +12,22 @@ A Utility Plugins for controlling Text Shadow of an text element.
 | `.text-shadow-xl` | `text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%)`|
 | `.text-shadow-none` | `text-shadow: none`|
 
-
-
 ## :bulb: Features
+
 > Minimal Set-up.
-
 > Ready to use out of the box.
-
 > Has default preset shadows with variants.
-
 > Users will be able to **`override`** and **`extend`** defaults the same way they can with Tailwind's built-in styles.
-
 
 ## Installation & changes in _tailwind.config.js_
 
-#### Yarn
+### Yarn
 
 ```sh
 yarn add tailwindcss-textshadow --dev
 ```
 
-#### npm
+### npm
 
 ```sh
 npm i --save-dev tailwindcss-textshadow
@@ -47,13 +42,12 @@ plugins: [
   require('tailwindcss-textshadow')
 ]
 ```
+
 > :beer: **Congratulations! You are ready to use `text-shadow` in your project.**
-
-
 
 ## How to use
 
-#### No text shadow
+### No text shadow
 
 Use `.text-shadow-none` to remove an existing text shadow from an element. This is most commonly used to remove a shadow that was applied at a smaller breakpoint.
 
@@ -73,7 +67,6 @@ For more information about Tailwind's responsive design features, check out the 
 </div>
 ```
 
-
 ## Customizing
 
 ### Text Shadow
@@ -82,8 +75,7 @@ By default this plugin provides drop text shadow utilities with five modifires, 
 
 If a `default` text shadow is provided, it will be used for the *non-suffixed* `.text-shadow` utility. Any other keys will be used as suffixes, for example the key `'2xl'` will create a corresponding `.text-shadow-2xl` utility.
 
-#### To override the default 
-
+#### To override the default
 
 ```javascript
 // tailwind.config.js
@@ -97,13 +89,11 @@ module.exports = {
      }
    }
  }
-
 ```
 
 #### To extend the default
 
 ```javascript
-
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -117,7 +107,6 @@ module.exports = {
     },
   },
 }
-  
 ```
 
 ### Responsive and pseudo-class variants
@@ -134,13 +123,12 @@ For example, this config will also generate active and group-hover variants:
 // tailwind.config.js
 module.exports = {
   variants: {
-    // ... 
+    // ...
     -   textShadow: ['responsive', 'hover', 'focus'],
     +   textShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   }
 }
 ```
-
 
 ## Credits
 
