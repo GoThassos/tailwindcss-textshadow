@@ -2,7 +2,6 @@
 
 A Utility Plugins for controlling Text Shadow of an text element.
 
-
 |  Class   |   Properties  |
 |----------|-------------|
 | `.text-shadow`   | `text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);` |
@@ -73,7 +72,7 @@ For more information about Tailwind's responsive design features, check out the 
 
 By default this plugin provides drop text shadow utilities with five modifires, and a utility for removing existing text shadows. You can change, add, or remove these by editing the `theme.textShadow` section of your Tailwind config.
 
-If a `default` text shadow is provided, it will be used for the *non-suffixed* `.text-shadow` utility. Any other keys will be used as suffixes, for example the key `'2xl'` will create a corresponding `.text-shadow-2xl` utility.
+If a `default` text shadow is provided, it will be used for the _non-suffixed_ `.text-shadow` utility. Any other keys will be used as suffixes, for example the key `'2xl'` will create a corresponding `.text-shadow-2xl` utility.
 
 #### To override the default
 
